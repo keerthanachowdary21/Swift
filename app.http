@@ -1,0 +1,40 @@
+### Load 10 users into the database
+GET http://localhost:3000/load
+
+### Delete all users
+DELETE http://localhost:3000/users
+
+### Delete a specific user by userId
+DELETE http://localhost:3000/users/3
+
+### Get a specific user by userId
+GET http://localhost:3000/users/3
+
+### Add a new user
+PUT http://localhost:3000/users
+Content-Type: application/json
+
+{
+  "id": 3,
+  "name": "Jwala S",
+  "username": "KS",
+  "email": "Jwala@example.com",
+  "address": {
+    "street": "123 Main Sta",
+    "suite": "Apt 4B",
+    "city": "New York",
+    "zipcode": "10001",
+    "geo": {
+      "lat": "40.7128",
+      "lng": "-74.0060"
+    }
+  },
+  "phone": "1-555-555-9555",
+  "website": "jwala.com",
+  "company": {
+    "name": "Doe Inc.",
+    "catchPhrase": "Innovative solutions",
+    "bs": "harness real-time e-markets"
+  },
+  "posts": []
+}
